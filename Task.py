@@ -7,9 +7,17 @@ year = int(input("Enter event year: "))
 month = (input("Enter event month: "))
 day = int(input("Enter event day: "))
 
-# Displaying output
-print("Name: ", first_name)
-print("Section: ", section)
-print("Event:", event)
-print("Event Date:", month, day, ",", year)
+# Formatting information
+name = [first_name.strip(), last_name.strip()]
+full_name = " " .join(name)
+name_code = (full_name.upper())
+clean_section = (section.strip().upper())
+clean_event = event.strip().title()
+
+# Displaying formatted output
+print("Formatted Output:")
+print("Name: ", full_name.title())
+print("Name Code: ", name_code)
+print("Section: ", clean_section)
+print("Event:", clean_event)
 print("Registration record created successfully.")
